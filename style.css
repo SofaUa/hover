@@ -1,0 +1,215 @@
+/* p::first-line {
+    color: darkgreen;
+} */
+
+/* h3::first-letter {
+    color: brown;
+    font-size: 30px;
+} */
+body{
+    font-family: 'Raleway', sans-serif;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+li::before {
+    content: "\2714";
+    font-size: 39px;
+    margin: 0px 10px 0px 0px;
+}
+
+li {
+    list-style: none;
+}
+
+li:hover {
+    color: tomato;
+}
+
+li::after {
+    content: "sale";
+    margin-left: 20px;
+    width: 40px;
+    height: 40px;
+    background-color: #ff0;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+li:hover::after {
+    color: aqua;
+}
+
+.box {
+    height: 40px;
+    width: 150px;
+    background-color: darkgoldenrod;
+    border-radius: 20px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 1s;
+    overflow: hidden;
+    margin-bottom: 40px;
+}
+
+.box::after {
+    content: "\2192";
+    margin: 0px 0px 0px 9px;
+    transition: all 0.5s;
+    transform: translateY(-24px);
+    opacity: 0;
+}
+
+.box:hover::after {
+    color: hotpink;
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* .htmlhttps://tympanus.net/Development/HoverEffectIdeas/index2 */
+.marley-text {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    padding: 40px;
+    text-align: right;
+}
+
+.marley {
+    position: relative;
+    display: inline-flex;
+    
+}
+
+.marley-text h3 {
+    font-size: 30px;
+    color: white;
+    font-weight: 300;
+    text-transform: uppercase;
+    transition: all 0.3s;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    line-height: 1;
+}
+
+.marley:hover .marley-text h3 {
+    transform: translateY(-15px);
+}
+
+.fat {
+    font-weight: 800;
+}
+
+.marley-text p {
+    font-size: 14px;
+    color: white;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.marley-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.marley-text h3::after {
+    content: "";
+    height: 5px;
+    width: 100%;
+    background-color: ghostwhite;
+    display: inline-block;
+    opacity: 0;
+    transition: all 0.4s;
+    transform: translateY(40px);
+}
+
+.marley:hover .marley-text h3::after {
+    opacity: 1;
+    transform: translateY(0px);
+}
+.marley-text p{
+    display: inline-block;
+    opacity: 0;
+    transition: all 0.4s;
+    transform: translateY(40px);
+}
+.marley:hover .marley-text p {
+    opacity: 1;
+    transform: translateY(0px);
+}
+.charming-roxy {
+color: white;
+}
+.charming-roxy h3{
+    font-size: 30px;
+    color: white;
+    font-weight: 300;
+    text-transform: uppercase;
+    transition: all 0.3s;
+    margin: 0px;
+    margin-bottom: 10px;
+    line-height: 1;
+}
+.charming-roxy p{
+    font-size: 14px;
+    color: white;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin: 0px;
+    opacity: 0;
+    transition:all 0.5s;
+    transform: translateX(-20px);
+}
+.charming-roxy{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 60px;
+}
+.roxy{
+    position: relative;
+    display: inline-flex;
+    overflow: hidden;
+}
+.roxy:hover .charming-roxy p{
+    opacity: 1;
+    transform: translateX(0px);
+} 
+.img1{
+    transition:all 0.5s;
+    transform: translateX(-20px) scale(1.2);  
+}
+.roxy:hover .img1{
+    transform: translateX(0px) scale(1.2);
+}
+.charming-roxy::after{
+    content:" ";
+    position: absolute;
+    top: 30px;
+    bottom: 30px;
+    left: 30px;
+    right: 30px;
+    border: 1px white solid;
+    opacity: 0;
+    transform: translateX(-20px);
+    transition: all 0.5s;
+}
+.roxy:hover .charming-roxy::after{
+    opacity: 1;
+    transform: translateX(0px);
+}
